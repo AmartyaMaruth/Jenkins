@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Remove any existing repo and clone the GitHub repository to fetch the Dockerfile and other resources
-                    sh 'rm -rf SWE645 && git clone ${GIT_REPO}'
+                    sh 'rm -rf Jenkins && git clone ${GIT_REPO}'
                 }
             }
         }
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image using the Dockerfile from the cloned repo
-                    sh 'docker build -t ${DOCKER_IMAGE} SWE645/'
+                    sh 'docker build -t ${DOCKER_IMAGE} Jenkins/'
                 }
             }
         }
