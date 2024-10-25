@@ -1,0 +1,164 @@
+
+<!-- 
+This HTML document represents the Student Registration Form for George Mason University.
+It includes:
+- A fixed header with the university logo and title.
+- A form section with various input fields for personal information, including:
+  - Text fields for names, address, and contact information.
+  - Checkboxes for campus preferences.
+  - Radio buttons for interest sources.
+  - A dropdown for recommendation likelihood.
+  - A text input for raffle number entries.
+  - A textarea for additional comments.
+- Submit and reset buttons for form submission and clearing.
+- A footer with copyright information.
+-->
+    
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Registration Form</title>
+        <link rel="stylesheet" href="style4.css">
+    </head>
+    <body>
+        <header>
+            <h1>
+                <span>George Mason University</span>
+                <img src="logo.jpg" alt="GMU Logo" class="logo">
+            </h1>
+        </header>
+        
+        <center>
+            <div>
+                <form id="form">
+                    <table>
+                        <caption>Student Registration Form</caption>
+
+                        
+                        <tr>
+                            <td>First Name</td>
+                            <td>:</td>
+                            <td><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td>Last Name</td>
+                            <td>:</td>
+                            <td><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td>Street Address</td>
+                            <td>:</td>
+                            <td><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>:</td>
+                            <td><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td>State</td>
+                            <td>:</td>
+                            <td><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td>Zip</td>
+                            <td>:</td>
+                            <td><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td>Telephone Number</td>
+                            <td>:</td>
+                            <td><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td><input type="email" required></td>
+                        </tr>
+                        <tr>
+                            <td>Date of Survey</td>
+                            <td>:</td>
+                            <td><input type="date" required></td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td colspan="3"><strong>What did you like most about the campus?</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <input type="checkbox" name=" " value="Students"> Students<br>
+                                <input type="checkbox" name=" " value="Location"> Location <br>
+                                <input type="checkbox" name=" " value="Campus"> Campus <br>
+                                <input type="checkbox" name="" value="Atmosphere"> Atmosphere <br>
+                                <input type="checkbox" name="" value="Dorm Rooms"> Dorm Rooms <br>
+                                <input type="checkbox" name=" " value="Sports"> Sports
+                            </td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td colspan="3"><strong>How did you become interested in the university?</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <input type="radio" name=" " value="Friends"> Friends <br>
+                                <input type="radio" name=" " value="Television"> Television <br>
+                                <input type="radio" name=" " value="Internet"> Internet <br>
+                                <input type="radio" name=" " value="Other"> Other
+                            </td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td colspan="3"><strong>How likely are you to recommend this school to others?</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <select name=" " required>
+                                    <option value="">Select an option</option>
+                                    <option value="Very Likely">Very Likely</option>
+                                    <option value="Likely">Likely</option>
+                                    <option value="Unlikely">Unlikely</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td colspan="3"><strong>Enter 10 comma-separated numbers (1-100) for a raffle:</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><input type="text" name="raffle" pattern="^([1-9][0-9]?(, )?){10}$" required></td>
+                        </tr>
+
+                    
+                        <tr>
+                            <td colspan="3"><strong>Additional Comments</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><textarea name="comments" rows="4" cols="30"></textarea></td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td colspan="3" align="right">
+                                <input type="submit" value="Submit">
+                                <input type="reset" value="Cancel">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            
+        </center>
+        <footer>
+            <p>&copy; 2024 belongs to Sai Amartya Maruth Mandedi care of Mani Kumar Edukoju, G01442046. All rights reserved.</p>
+        </footer
+        
+    </body>
+    </html>

@@ -1,0 +1,118 @@
+/* 
+This CSS file styles the Student Registration Form for George Mason University. It includes a fixed header with a white background and flexbox layout for centering the logo and title. The body features a light background color and a flexbox design for vertical and horizontal alignment of form elements. The form has a white background, rounded corners, and a subtle shadow for a clean look. 
+
+Tables are styled for full-width input fields with clear captions, while input fields, including text, email, and date, have consistent styling for a user-friendly experience. Buttons are designed with a forest green background, white text, and rounded corners for interactivity. The footer is fixed at the bottom, ensuring visibility and centered text for a cohesive design throughout the registration form.
+*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white ;
+    color: black;
+    padding: 10px 20px; 
+    z-index: 1000;
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0; 
+    width: 100%; 
+}
+
+h1 span {
+    margin-left: 10px;
+}
+
+.logo {
+    height: 60px; 
+    width: auto;
+    margin-right: 10px;
+}
+body {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    background-color: #f4f7f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 50px ;
+    margin-bottom: 100px;
+
+   
+}
+
+form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    margin-top: 80px    ;
+}
+
+table {
+    width: 100%;
+}
+
+caption {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+td:first-child {
+    text-align: left;
+    font-weight: bold;
+    color: #34495e;
+}
+
+input[type="text"], input[type="email"], input[type="date"], select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #2c3e50;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 10px;
+    
+}
+input[type="submit"], input[type="reset"] {
+    background-color: forestgreen;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: forestgreen;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
