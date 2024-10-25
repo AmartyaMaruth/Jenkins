@@ -3,7 +3,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = "232183/my-survey-app:latest"
         DOCKER_CREDENTIALS_ID = 'docker-id'  // Updated to the correct credential ID
-        GIT_REPO = 'https://github.com/AmartyaMaruth/SWE645.git'  // GitHub repo URL
+        GIT_REPO = 'https://github.com/AmartyaMaruth/Jenkins.git'  // GitHub repo URL
         KUBECONFIG_CREDENTIALS_ID = 'kubeconfig_id' // Kubernetes config credential ID
         AWS_CREDENTIALS_ID = 'aws_credentials_id' // AWS credentials ID (for AWS credentials type)
     }
