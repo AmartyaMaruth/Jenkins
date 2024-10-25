@@ -13,9 +13,7 @@ pipeline {
             steps {
                 script {
                     // Remove any existing repo and clone the GitHub repository to fetch the Dockerfile and other resources
-                    sh 'rm -rf SWE645'
-                    sh 'git clone ${GIT_REPO}'
-                    sh 'cd SWE645'
+                    sh 'rm -rf SWE645 && git clone ${GIT_REPO}'
                 }
             }
         }
@@ -23,8 +21,8 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    // Navigate into the cloned directory and build the Docker image using the Dockerfile from the repo
-                    sh 'docker build -t ${DOCKER_IMAGE} .'
+                    // Build the Docker image using the Dockerfile from the cloned repo
+                    sh 'docker build -t ${DOCKER_IMAGE} SWE645/'
                 }
             }
         }
@@ -51,11 +49,15 @@ pipeline {
                     withCredentials([file(credentialsId: KUBECONFIG_CREDENTIALS_ID, variable: 'KUBECONFIG'),
                                      [$class: 'AmazonWebServicesCredentialsBinding', credentialsId: AWS_CREDENTIALS_ID]]) {
                         
+                        // Check the current context or nodes in the cluster for debugging (optional)
+                        sh 'kubectl config current-context' // Optional: Check current context
+                        // sh 'kubectl get nodes' // Optional: List nodes for verification
+                        
                         // Deploy the Kubernetes deployment and service YAML files
-                        sh 'kubectl delete -f my-survey-app-deployment.yaml'
-                        //sh 'kubectl delete -f my-survey-app-service.yaml'
-                        sh 'kubectl apply -f my-survey-app-deployment.yaml --validate=false'
-                        //sh 'kubectl apply -f my-survey-app-service.yaml --validate=false'
+                        sh 'kubectl delete -f my-survey-app-deployment.yaml || true' // Ignore if it doesn't exist
+                        // sh 'kubectl delete -f my-survey-app-service.yaml || true' // Uncomment if you want to delete the service as well
+                        sh 'kubectl apply -f my-survey-app-deployment.yaml'
+                        // sh 'kubectl apply -f my-survey-app-service.yaml' // Uncomment if you want to apply the service as well
                     }
                 }
             }
