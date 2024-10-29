@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: my-survey-app
-        image: 232183/my-survey-app:latest  # Use your numeric username here
+        image: 232183/my-survey-app:latest 
         ports:
         - containerPort: 80
